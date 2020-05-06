@@ -1,0 +1,12 @@
+{
+  "name": "senior-celebration",
+  "scripts": {
+    "build": "eleventy build",
+    "dev": "eleventy --serve",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "eleventy-plugin-sass": "^1.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+---
+title: Middlebury Senior Celebration
+---
