@@ -24,4 +24,4 @@ npm run build
 
 ## Deploy
 
-TODO: Simply push to `master` branch and travisci will build and deploy site to `site` branch.
+Simply push to `master` branch and GitHub Actions will build and deploy to `site` branch.
