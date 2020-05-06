@@ -2,6 +2,8 @@
 
 > Built using [Eleventy](https://www.11ty.dev/)
 
+![Deploy](https://github.com/middlebury/senior-celebration/workflows/Deploy/badge.svg)
+
 ## Getting started
 
 ```bash
