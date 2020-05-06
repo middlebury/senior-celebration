@@ -2,7 +2,8 @@
   "name": "senior-celebration",
   "scripts": {
     "build": "eleventy build",
-    "dev": "eleventy --serve",
+    "dev": "npm run clean && eleventy --serve",
+    "clean": "rm -rf _site",
     "start": "npm run dev"
   },
   "devDependencies": {
