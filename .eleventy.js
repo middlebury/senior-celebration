@@ -7,6 +7,10 @@ module.exports = function (config) {
   // add sass support
   config.addPlugin(sass);
 
+  config.setBrowserSyncConfig({
+    open: true
+  });
+
   return {
     // site will live at middlebury.edu/senior-celebration
     pathPrefix: '/senior-celebration',
