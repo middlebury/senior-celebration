@@ -1,14 +1,48 @@
-<figure>
-  <div class="video">
-    <!-- <a href="{{button_href}}">{{button_text}}</a> -->
+<figure class="">
+  <div class="relative pt-16:9 h-0">
+    <a href="{{video.href}}" data-video>
+      <div class="absolute inset-0 z-10" data-video-wrap>
+        <img
+          src="{{'/' | url }}img/{{video.image}}"
+          alt="{{video.image_alt}}"
+          class="object-contain h-full w-full"
+        />
+      </div>
+      <div
+        class="z-20 absolute inset-0 flex items-center justify-center"
+        data-video-btn
+      >
+        <div class="">
+          <span
+            class="inline-block text-navy px-4 py-2 bg-white hover:bg-navy hover:text-white flex items-center duration-100"
+          >
+            <span class="mr-2">
+              {{video.button_text}}
+            </span>
 
-    <img
-      src="{{'/' | url }}img/{{hero_video.image}}"
-      alt="{{hero_video.image_alt}}"
-    />
+            <svg
+              width="7"
+              height="9"
+              viewBox="0 0 7 9"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.5 4.02405L0.5 8.02405L0.5 0.0240479L6.5 4.02405Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </a>
   </div>
 
-  <figcaption>
-    {{hero_video.caption}}
+  <figcaption class="text-center py-3 text-2 mx-auto max-w-3xl">
+    {{video.caption}}
   </figcaption>
 </figure>

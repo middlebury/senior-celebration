@@ -1,29 +1,32 @@
-<header class="header">
+<header class="border-b border-t-8 border-navy py-2">
   <div class="container">
-    <div class="header__wrap">
-      <h1 class="header__logo">
+    <div class="flex justify-between items-center">
+      <h1 class="">
         <span class="sr-only">
-          Senior Celebration May 24, 2020
+          {{site.title}}
         </span>
         <img
           src="{{ '/img/senior-celebration.svg' | url }}"
-          alt="Senior Celebration May 24, 2020"
+          alt=""
           aria-hidden="true"
         />
       </h1>
 
-      <nav class="header__nav">
-        <ul class="header__list">
-          <li class="header__item">
-            <a href="" class="header__link">Link 1</a>
-          </li>
-          <li class="header__item">
-            <a href="" class="header__link">Link 2</a>
-          </li>
-        </ul>
-
-        <img src="{{ '/img/shield.svg' | url }}" alt="Middlebury Shield" />
-      </nav>
+      <div class="flex items-center">
+        <nav class="">
+          <ul class="flex">
+            <li class="mr-3">
+              <a href="" class="text-navy">Link 1</a>
+            </li>
+            <li class="mr-3">
+              <a href="" class="text-navy">Link 2</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="{{site.midd_url}}/college">
+          <img src="{{ '/img/shield.svg' | url }}" alt="Middlebury Shield" />
+        </a>
+      </div>
     </div>
   </div>
 </header>

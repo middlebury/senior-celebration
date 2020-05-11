@@ -1,0 +1,37 @@
+title: Senior Celebration May 24, 2020
+description: site description
+midd_url: https://www.middlebury.edu
+
+intro:
+  title: Lorem ipsum dolor sit amet
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+video:
+  button_href: '#'
+  button_text: Watch Live Stream
+  image: mead-chapel.jpg
+  image_alt: Mead Chapel
+  iframe_src: '#'
+  caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+social:
+  title: '#MiddSeniorCelebration'
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+closing:
+  title: lorme ipsum dolor set
+  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+footer:
+  - text: About Middlebury
+    href: http://www.middlebury.edu/about
+  - text: Giving
+    href: http://www.middlebury.edu/giving
+  - text: Employment
+    href: http://www.middlebury.edu/offices/business/hr/jobseeker
+  - text: Offices and Services
+    href: http://www.middlebury.edu/office/
+  - text: Copyright
+    href: http://www.middlebury.edu/about/copyright
+  - text: Privacy
+    href: http://www.middlebury.edu/about/privacy

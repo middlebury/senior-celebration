@@ -1,21 +1,16 @@
-<footer class="footer">
-  <h2 class="sr-only">
-    Additional Navigation
-  </h2>
+<footer class="bg-navy-dark py-5">
   <div class="container">
-    <div class="footer__wrap">
-      <div class="footer__primary">
-        <div class="footer__logo">
-          <a href="https://www.middlebury.edu">
-            {% include midd-logo.svg %}
-          </a>
-        </div>
+    <div class="lg:flex items-center">
+      <div class="flex-auto mb-5 lg:mb-0">
+        <a href="{{site.midd_url}}">
+          {% include midd-logo.svg %}
+        </a>
       </div>
-      <div class="footer__secondary">
-        <ul class="footer__nav">
-          {% for item in footer %}
-          <li class="footer__item">
-            <a href="{{ item.href }}" class="footer__link">
+      <div class="flex-fill">
+        <ul class="flex flex-wrap">
+          {% for item in site.footer %}
+          <li class="pr-5 mb-3 w-1/2 md:w-auto lg:mb-0 last:pr-0">
+            <a href="{{ item.href }}" class="text-white hover:underline text-2">
               {{ item.text }}
             </a>
           </li>
