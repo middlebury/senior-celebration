@@ -8,7 +8,7 @@ module.exports = function (config) {
   config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
 
   // add sass support
-  config.addPlugin(sass);
+  // config.addPlugin(sass);
 
   config.setBrowserSyncConfig({
     open: true
