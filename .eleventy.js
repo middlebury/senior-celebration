@@ -1,8 +1,11 @@
 const sass = require('eleventy-plugin-sass');
+const yaml = require('js-yaml');
 
 module.exports = function (config) {
   // copy images dir to _site
   config.addPassthroughCopy('img');
+
+  config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
 
   // add sass support
   config.addPlugin(sass);

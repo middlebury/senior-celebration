@@ -1,0 +1,20 @@
+.footer {
+  background: $navy;
+  padding: $spacing-3;
+}
+
+.footer__wrap {
+  @include breakpoint(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer__primary {
+}
+.footer__primary {
+}
+
+.footer__link {
+  color: $white;
+}
