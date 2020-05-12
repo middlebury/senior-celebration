@@ -1,17 +1,24 @@
 <figure class="">
-  <div class="relative pt-16:9 h-0">
-    <a href="{{video.href}}" data-video>
-      <div class="absolute inset-0 z-10" data-video-wrap>
+  <div class="" data-video='<iframe
+    width="951"
+    height="535"
+    src=""
+    frameborder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe'>
+  
+
+  <div class="relative pt-16:9 h-0" data-video-content>
+    <a href="{{video.button_href}}" data-video-btn>
+      <div class="absolute inset-0 z-10">
         <img
           src="{{'/' | url }}img/{{video.image}}"
           alt="{{video.image_alt}}"
           class="object-contain h-full w-full"
         />
       </div>
-      <div
-        class="z-20 absolute inset-0 flex items-center justify-center"
-        data-video-btn
-      >
+      <div class="z-20 absolute inset-0 flex items-center justify-center">
         <div class="">
           <span
             class="inline-block text-navy px-4 py-2 bg-white hover:bg-navy hover:text-white flex items-center duration-100"
