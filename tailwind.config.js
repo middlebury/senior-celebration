@@ -16,7 +16,7 @@ module.exports = {
       padding: '1rem'
     },
     lineHeight: {
-      heading: '1.2',
+      heading: '1.4',
       body: '1.7',
       none: '1'
     },
