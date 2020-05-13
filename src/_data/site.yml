@@ -1,6 +1,11 @@
 title: Senior Celebration May 24, 2020
 description: site description
 midd_url: https://www.middlebury.edu
+nav:
+  - text: Seniors
+    url: /seniors
+  - text: Sub page 2
+    url: /about
 
 footer:
   - text: About Middlebury

@@ -6,29 +6,50 @@
           <span class="sr-only">
             {{site.title}}
           </span>
-          <img
-            src="{{ '/img/senior-celebration.svg' | url }}"
-            alt=""
-            aria-hidden="true"
-          />
+          <span aria-hidden="true" focusable="false">
+            {% include svg/senior-celebration.svg %}
+          </span>
         </a>
       </h1>
 
-      <div class="flex items-center">
-        <nav class="">
-          <ul class="flex">
-            <li class="mr-3">
-              <a href="" class="text-navy">Link 1</a>
-            </li>
-            <li class="mr-3">
-              <a href="" class="text-navy">Link 2</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="{{site.midd_url}}/college">
-          <img src="{{ '/img/shield.svg' | url }}" alt="Middlebury Shield" />
-        </a>
-      </div>
+      <nav class="flex items-center">
+        <ul class="hidden md:flex mr-5">
+          {% for item in site.nav %}
+          <li class="mr-4 last:mr-0">
+            <a href="{{item.url | url}}" class="text-navy">{{item.text}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="flex justify-between">
+          <button class="md:hidden js-menu-btn px-4">
+            <span class="sr-only">Toggle menu</span>
+            <span class="times hidden">
+              {% include svg/times.svg %}
+            </span>
+            <span class="bars">
+              {% include svg/bars.svg %}
+            </span>
+          </button>
+
+          <a href="{{site.midd_url}}/college">
+            <span class="sr-only">Middlebury College</span>
+            <span aria-hidden="true" focusable="false">
+              {% include svg/shield.svg %}
+            </span>
+          </a>
+        </div>
+      </nav>
     </div>
   </div>
 </header>
+
+<ul class="js-menu hidden bg-navy py-3">
+  {% for item in site.nav %}
+  <li class="">
+    <a href="{{item.url | url}}" class="block p-2 px-3 text-white"
+      >{{item.text}}</a
+    >
+  </li>
+  {% endfor %}
+</ul>

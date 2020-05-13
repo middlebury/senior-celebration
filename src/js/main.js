@@ -22,4 +22,17 @@
       showVideo();
     };
   }
+
+  // mobile toggler
+
+  var menuBtn = document.querySelector('.js-menu-btn');
+  var menu = document.querySelector('.js-menu');
+  var timesIcon = menuBtn.querySelector('.times');
+  var barsIcon = menuBtn.querySelector('.bars');
+
+  menuBtn.onclick = function () {
+    menu.classList.toggle('hidden');
+    barsIcon.classList.toggle('hidden');
+    timesIcon.classList.toggle('hidden');
+  };
 })();
