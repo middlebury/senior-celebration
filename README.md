@@ -4,6 +4,10 @@
 
 ![Deploy](https://github.com/middlebury/senior-celebration/workflows/Deploy/badge.svg)
 
+## Requirements
+
+- Node 12.14+
+
 ## Getting started
 
 ```bash
