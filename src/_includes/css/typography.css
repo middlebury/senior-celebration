@@ -16,6 +16,7 @@
     font-weight: 500;
     border-bottom: 1px solid currentColor;
     text-decoration: none;
+    @apply text-navy;
   }
   a:hover {
     border-bottom-color: transparent;
