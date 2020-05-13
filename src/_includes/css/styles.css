@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .pt-16\:9 {
   padding-top: 56.25%;
 }
@@ -20,4 +21,10 @@
 
 .h2 {
   @apply text-7;
+}
+
+.typography {
+  * {
+    background: red;
+  }
 }
