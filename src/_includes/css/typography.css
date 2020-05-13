@@ -1,0 +1,179 @@
+.typography {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+  }
+
+  a {
+    font-weight: 500;
+    border-bottom: 1px solid currentColor;
+    text-decoration: none;
+  }
+  a:hover {
+    border-bottom-color: transparent;
+    text-decoration: none;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  ul > li {
+    position: relative;
+  }
+
+  ul > li:before {
+    content: '\2022';
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 6px;
+    font-size: 10px;
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: ol;
+  }
+  ol > li {
+    counter-increment: ol;
+    position: relative;
+  }
+  ol > li:before {
+    content: counter(ol) '.';
+    position: absolute;
+    right: calc(100% + 0.5rem);
+    top: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  li {
+    font-size: 1.125rem;
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 0.25rem;
+  }
+  li p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  dl {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  @media only screen and (min-width: 768px) {
+    dl {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  dt {
+    font-weight: 500;
+    padding-right: 1.5rem;
+    margin-bottom: 0.25rem;
+  }
+  dt:last-child {
+    margin-bottom: 0;
+  }
+  @media only screen and (min-width: 768px) {
+    dt {
+      flex: 0 0 30%;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    dt:not(:last-of-type) {
+      border-bottom: 1px solid #dedede;
+    }
+  }
+
+  dd {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  dd:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  dd:not(:last-of-type) {
+    border-bottom: 1px solid #dedede;
+  }
+  @media only screen and (min-width: 768px) {
+    dd {
+      flex: 0 0 70%;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    @apply leading-heading;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  @media only screen and (min-width: 1024px) {
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    h2 {
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+}

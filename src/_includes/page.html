@@ -1,9 +1,14 @@
 ---
 layout: base.html
+markdown: true
 ---
 
-<article class="mx-auto max-w-4xl py-5">
-  <h1 class="text-10 mb-3 font-serif">{{title}}</h1>
+<article class="mx-auto max-w-4xl py-5 lg:py-7">
+  <h1 class="h1 mb-3 md:mb-7">
+    {{title}}
+  </h1>
 
-  {{ content | safe }}
+  <div class="{% if markdown %} typography {% endif %} mb-7">
+    {{ content | safe }}
+  </div>
 </article>
