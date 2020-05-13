@@ -1,6 +1,6 @@
 # Senior Celebration
 
-> Built using [Eleventy](https://www.11ty.dev/)
+> Built using [Eleventy](https://www.11ty.dev/) and [Tailwindcss](https://tailwindcss.com/)
 
 ![Deploy](https://github.com/middlebury/senior-celebration/workflows/Deploy/badge.svg)
 
