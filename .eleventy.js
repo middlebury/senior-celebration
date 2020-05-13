@@ -1,4 +1,17 @@
 const yaml = require('js-yaml');
+const htmlmin = require('html-minifier');
+
+const minHtml = (content, outputPath) => {
+  if (outputPath.endsWith('.html')) {
+    let minified = htmlmin.minify(content, {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true
+    });
+    return minified;
+  }
+  return content;
+};
 
 module.exports = function (config) {
   // copy images dir to _site
@@ -13,6 +26,10 @@ module.exports = function (config) {
   config.setBrowserSyncConfig({
     open: true
   });
+
+  if (process.env.NODE_ENV == 'production') {
+    config.addTransform('htmlmin', minHtml);
+  }
 
   return {
     // site will live at middlebury.edu/senior-celebration
