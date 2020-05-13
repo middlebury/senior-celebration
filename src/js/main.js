@@ -8,7 +8,7 @@
 
     var iframe = document.createElement('iframe');
     iframe.src = url + '?autoplay=1';
-    iframe.allow = 'autoplay';
+    iframe.allow = 'autoplay; encrypted-media';
     iframe.classList.add('absolute', 'inset-0', 'h-full', 'w-full');
 
     content.innerHTML = '';
