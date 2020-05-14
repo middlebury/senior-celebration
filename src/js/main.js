@@ -9,6 +9,7 @@
     var iframe = document.createElement('iframe');
     iframe.src = url + '?autoplay=1';
     iframe.allow = 'autoplay; encrypted-media';
+    iframe.setAttribute('allowfullscreen', 'allowfullscreen');
     iframe.classList.add('absolute', 'inset-0', 'h-full', 'w-full');
 
     content.innerHTML = '';
