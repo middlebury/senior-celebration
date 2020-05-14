@@ -18,7 +18,7 @@
           <li class="mr-4 last:mr-0">
             <a
               href="{{item.url | url}}"
-              class="text-navy inline-block border-b-2 border-transparent hover:border-navy"
+              class="text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
               >{{item.text}}</a
             >
           </li>
