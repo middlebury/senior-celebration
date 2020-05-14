@@ -1,6 +1,8 @@
 ---
 title: Credits for Senior Montage
 layout: page
+tags: page
+sort: 50
 ---
 
 Proident officia pariatur [eiusmod quis](#) in fugiat. **Enim culpa** est eu cillum sit occaecat ipsum labore _fugiat mollit_ ex nostrud mollit. Qui enim fugiat ad anim pariatur cupidatat consectetur dolore. Elit Lorem ea anim Lorem eiusmod nisi officia occaecat non. Ipsum aliqua quis culpa minim. Esse cupidatat nostrud mollit ipsum sunt fugiat magna. Deserunt ipsum eiusmod exercitation laboris dolore ut commodo tempor et anim enim voluptate cillum.

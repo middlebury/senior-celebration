@@ -14,12 +14,12 @@
 
       <nav class="flex items-center">
         <ul class="hidden lg:flex mr-6">
-          {% for item in site.nav %}
+          {% for item in collections.nav%}
           <li class="mr-4 last:mr-0">
             <a
               href="{{item.url | url}}"
               class="text-2 text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
-              >{{item.text}}</a
+              >{{item.data.title}}</a
             >
           </li>
           {% endfor %}
@@ -50,10 +50,10 @@
 <div class="js-menu hidden bg-navy py-3">
   <div class="container">
     <ul class="">
-      {% for item in site.nav %}
+      {% for item in collections.nav %}
       <li class="">
         <a href="{{item.url | url}}" class="block p-2 px-3 text-white"
-          >{{item.text}}</a
+          >{{item.data.title}}</a
         >
       </li>
       {% endfor %}

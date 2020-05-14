@@ -1,17 +1,6 @@
 title: Senior Celebration May 24, 2020
 description: site description
 midd_url: https://www.middlebury.edu
-nav:
-  - text: List of Graduates
-    url: /graduates
-  - text: Department Receptions
-    url: /receptions
-  - text: Honorary Degrees
-    url: /honorary-degrees
-  - text: Program
-    url: /program
-  - text: Credits for Senior Montage
-    url: /credits
 
 footer:
   - text: About Middlebury

@@ -27,6 +27,11 @@ module.exports = function (config) {
     open: true
   });
 
+  config.addCollection('nav', (collection) => {
+    const col = collection.getFilteredByTags('page');
+    return col.sort((a, b) => a.data.sort - b.data.sort);
+  });
+
   if (process.env.NODE_ENV == 'production') {
     config.addTransform('htmlmin', minHtml);
   }
