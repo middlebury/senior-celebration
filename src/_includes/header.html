@@ -13,12 +13,12 @@
       </h1>
 
       <nav class="flex items-center">
-        <ul class="hidden md:flex mr-6">
+        <ul class="hidden lg:flex mr-6">
           {% for item in site.nav %}
           <li class="mr-4 last:mr-0">
             <a
               href="{{item.url | url}}"
-              class="text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
+              class="text-2 text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
               >{{item.text}}</a
             >
           </li>
@@ -26,7 +26,7 @@
         </ul>
 
         <div class="flex justify-between">
-          <button class="md:hidden js-menu-btn px-4">
+          <button class="lg:hidden js-menu-btn px-4">
             <span class="sr-only">Toggle menu</span>
             <span class="times hidden">
               {% include svg/times.svg %}
@@ -47,13 +47,16 @@
     </div>
   </div>
 </header>
-
-<ul class="js-menu hidden bg-navy py-3">
-  {% for item in site.nav %}
-  <li class="">
-    <a href="{{item.url | url}}" class="block p-2 px-3 text-white"
-      >{{item.text}}</a
-    >
-  </li>
-  {% endfor %}
-</ul>
+<div class="js-menu hidden bg-navy py-3">
+  <div class="container">
+    <ul class="">
+      {% for item in site.nav %}
+      <li class="">
+        <a href="{{item.url | url}}" class="block p-2 px-3 text-white"
+          >{{item.text}}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
