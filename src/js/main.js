@@ -10,7 +10,8 @@
     iframe.src = url + '?autoplay=1';
     iframe.allow = 'autoplay; encrypted-media';
     iframe.setAttribute('allowfullscreen', 'allowfullscreen');
-    iframe.classList.add('absolute', 'inset-0', 'h-full', 'w-full');
+    // ie11 doesn't support multi arg classList.add()
+    iframe.setAttribute('class', 'absolute inset-0 h-full w-full');
 
     content.innerHTML = '';
 
