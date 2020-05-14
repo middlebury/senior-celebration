@@ -47,7 +47,10 @@ module.exports = {
       colors: {
         navy: '#0d395f',
         'navy-dark': '#022543',
-        mine: '#202020'
+        mine: '#202020',
+        gray: '#767676',
+        'gray-light': '#dedede',
+        'gray-lighter': '#f8f8f8'
       }
     }
   },

@@ -13,10 +13,14 @@
       </h1>
 
       <nav class="flex items-center">
-        <ul class="hidden md:flex mr-5">
+        <ul class="hidden md:flex mr-6">
           {% for item in site.nav %}
           <li class="mr-4 last:mr-0">
-            <a href="{{item.url | url}}" class="text-navy">{{item.text}}</a>
+            <a
+              href="{{item.url | url}}"
+              class="text-navy inline-block border-b-2 border-transparent hover:border-navy"
+              >{{item.text}}</a
+            >
           </li>
           {% endfor %}
         </ul>
