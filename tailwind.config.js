@@ -1,3 +1,5 @@
+const rem = (unit) => unit / 16 + 'rem';
+
 module.exports = {
   purge: ['./src/**/*.html', './src/js/*.js'],
   theme: {
@@ -22,26 +24,26 @@ module.exports = {
     },
     spacing: {
       0: 0,
-      1: '4px',
-      2: '8px',
-      3: '16px',
-      4: '24px',
-      5: '32px',
-      6: '48px',
-      7: '64px',
-      8: '96px'
+      1: rem(4),
+      2: rem(8),
+      3: rem(16),
+      4: rem(24),
+      5: rem(32),
+      6: rem(48),
+      7: rem(64),
+      8: rem(96)
     },
     fontSize: {
-      1: '12px',
-      2: '14px',
-      3: '16px',
-      4: '18px',
-      5: '20px',
-      6: '24px',
-      7: '28px',
-      8: '36px',
-      9: '48px',
-      10: '64px'
+      1: rem(12),
+      2: rem(14),
+      3: rem(16),
+      4: rem(18),
+      5: rem(20),
+      6: rem(24),
+      7: rem(28),
+      8: rem(36),
+      9: rem(48),
+      10: rem(64)
     },
     extend: {
       colors: {
