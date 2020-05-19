@@ -17,7 +17,7 @@
           {% for item in collections.nav%}
           <li class="mr-4 last:mr-0">
             <a
-              href="{{item.url | url}}"
+              href="{% if item.data.url %}{{item.data.url}}{% else %}{{item.url | url}}{% endif %}"
               class="text-2 text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
               >{{item.data.title}}</a
             >
