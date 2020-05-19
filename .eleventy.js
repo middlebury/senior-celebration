@@ -1,5 +1,6 @@
 const yaml = require('js-yaml');
 const htmlmin = require('html-minifier');
+const markdownIt = require('markdown-it');
 
 const minHtml = (content, outputPath) => {
   if (outputPath.endsWith('.html')) {
@@ -22,6 +23,16 @@ module.exports = function (config) {
   config.addLayoutAlias('page', 'page.html');
 
   config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
+
+  const md = new markdownIt();
+
+  config.addFilter('markdownify', (content) => {
+    return md.renderInline(content);
+  });
+
+  config.addFilter('markdown', (content) => {
+    return md.render(content);
+  });
 
   config.setBrowserSyncConfig({
     open: true

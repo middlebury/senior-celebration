@@ -25,6 +25,17 @@
     };
   }
 
+  var transcriptBtn = document.querySelector('.js-transcript-btn');
+  var transcriptBody = document.querySelector('.js-transcript-body');
+  var transcriptBtnIcon = transcriptBtn.querySelector('.js-transcript-icon');
+
+  if (transcriptBtn) {
+    transcriptBtn.onclick = function () {
+      transcriptBody.classList.toggle('hidden');
+      transcriptBtnIcon.classList.toggle('-rotate-180');
+    };
+  }
+
   // mobile toggler
 
   var menuBtn = document.querySelector('.js-menu-btn');

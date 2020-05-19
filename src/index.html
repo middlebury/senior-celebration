@@ -2,42 +2,113 @@
 layout: base
 
 intro:
-  title: Lorem ipsum dolor sit amet
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  title: Celebrating the graduates of Middlebury College
+  text: |
+    **Our livestream event begins Sunday, May 24, 2020, at 2 p.m. EDT**  
+
+    Streaming live from Middlebury College, the Senior Celebration recognizes our graduates and confer degrees. Students, parents, families and friends are all invited to&nbsp;participate.
 
 video:
   button_href: https://www.youtube.com/embed/MpLrMqftSyk
   button_text: Watch Live Stream
   image: mead-chapel.jpg
   image_alt: Mead Chapel
-  caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  caption: |
+    Concurrent [Chinese language interpretation](#) and [Spanish language interpretation](#), provided by Middlebury College students, is available.
+
+program:
+  title: Order of the Program
+  text: (total running time is about 50 minutes)
+  items:
+    - Musical Video Intro
+    - Invocation
+    - Greetings from President Patton
+    - Congratulations from the Dean and Provost
+    - Senior Greetings (SGA President and Class Officers)
+    - Video Montage of Seniors
+    - Preview of Postponed Commencement
+    - Conferral of the Degrees by President Patton
+    - Closing Song  (Alma Mater, a capella)
 
 social:
   title: '#MiddSeniorCelebration'
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  text: |
+    Post photos and memories to celebrate our graduates! Use our #MiddSeniorCelebration hashtag or text to 1-936-255-2364. See our [guidelines](https://www.middlebury.edu/college/commencement/social-guidelines) for best ways to share.
 
 closing:
-  title: lorme ipsum dolor set
-  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  title: All Are Welcome to Participate
+  text: |
+    Students, parents, families, friends, faculty and staff are all invited to share in this event where bachelors’ degrees will be officially awarded. Program details will be posted and updated frequently as they are finalized. 
+
+    Concurrent [Chinese language interpretation](#) and [Spanish language interpretation](#), provided by Middlebury College students, is available.
+
+    We look forward to hosting our graduates and families on campus for formal commencement exercises as soon as they are feasible to schedule.
 ---
 
 <div class="py-5 md:py-6 lg:py-7 text-center max-w-3xl mx-auto">
   <h2 class="h2 mb-3">{{intro.title}}</h2>
   <p class="text-4">
-    {{intro.text}}
+    {{intro.text | markdownify}}
   </p>
 </div>
 
 <div class="mb-7">
-  {% include video.html %}
+  <div class="relative pt-16:9 h-0">
+    <iframe
+      src="{{video.button_href}}"
+      class="absolute inset-0 h-full w-full"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <div class="border border-gray-light border-t-0 p-3">
+    <div class="text-center">
+      <h2 class="text-5 font-serif">{{program.title}}</h2>
+      <p class="text-3 mb-3">{{program.text}}</p>
+    </div>
+    <ol class="text-center mb-3">
+      {% for item in program.items %}
+      <li class="mb-1 mr-3 inline-block">
+        <span class="font-bold">{{forloop.index + 1}}.</span>
+        {{item}}
+      </li>
+      {% endfor %}
+    </ol>
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center">
+        <button
+          class="text-navy inline-flex items-center p-2 js-transcript-btn"
+        >
+          <span class="uppercase font-medium text-2 tracking-widest">
+            Transcript
+          </span>
+          <span
+            aria-hidden="true"
+            focusable="false"
+            class="ml-2 js-transcript-icon transform duration-200"
+          >
+            {% include svg/chevron-down.svg %}
+          </span>
+        </button>
+      </div>
+      <div class="typography js-transcript-body hidden">
+        {% include transcript.html %}
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center py-3 text-2 mx-auto max-w-3xl contains-links">
+    {{video.caption | markdownify}}
+  </div>
 </div>
 
 <div class="text-center mb-7 border-t-4 pt-3 border-navy">
   <h2 class="text-7 mb-3 font-sans font-semibold text-navy leading-heading">
     {{social.title}}
   </h2>
-  <p class="text-4 max-w-3xl mx-auto">
-    {{social.text}}
+  <p class="text-4 max-w-3xl mx-auto contains-links">
+    {{social.text | markdownify}}
   </p>
 </div>
 
@@ -45,7 +116,7 @@ closing:
 
 <div class="my-7 md:my-8 text-center max-w-3xl mx-auto">
   <h2 class="h2 mb-3">{{closing.title}}</h2>
-  <p class="text-4">
-    {{closing.text}}
+  <p class="text-4 contains-links">
+    {{closing.text | markdownify}}
   </p>
 </div>
