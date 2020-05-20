@@ -27,7 +27,7 @@
 
   var transcriptBtn = document.querySelector('.js-transcript-btn');
   var transcriptBody = document.querySelector('.js-transcript-body');
-  var transcriptBtnIcon = transcriptBtn.querySelector('.js-transcript-icon');
+  var transcriptBtnIcon = document.querySelector('.js-transcript-icon');
 
   if (transcriptBtn) {
     transcriptBtn.onclick = function () {
