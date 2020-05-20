@@ -178,3 +178,9 @@
     font-weight: 600;
   }
 }
+
+.typography--sm {
+  p {
+    @apply text-2;
+  }
+}
