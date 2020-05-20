@@ -18,9 +18,18 @@
           <li class="mr-4 last:mr-0">
             <a
               href="{% if item.data.url %}{{item.data.url}}{% else %}{{item.url | url}}{% endif %}"
-              class="text-2 text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %}"
-              >{{item.data.title}}</a
+              class="text-2 text-navy inline-block border-b-2 border-transparent hover:border-navy {% if page.url contains item.url %} border-navy {% endif %} flex items-center"
             >
+              <span>
+                {{item.data.title}}
+              </span>
+
+              {% if item.data.url %}
+              <span aria-hidden="true" focusable="false" class="ml-2">
+                {% include svg/external-link.svg %}
+              </span>
+              {% endif %}
+            </a>
           </li>
           {% endfor %}
         </ul>
@@ -52,9 +61,15 @@
     <ul class="">
       {% for item in collections.nav %}
       <li class="">
-        <a href="{{item.url | url}}" class="block p-2 px-3 text-white"
-          >{{item.data.title}}</a
-        >
+        <a
+          href="{% if item.data.url %}{{item.data.url}}{% else %}{{item.url | url}}{% endif %}"
+          class="block p-2 px-3 text-white flex items-center"
+          >{{item.data.title}} {% if item.data.url %}
+          <span aria-hidden="true" focusable="false" class="ml-2">
+            {% include svg/external-link.svg %}
+          </span>
+          {% endif %}
+        </a>
       </li>
       {% endfor %}
     </ul>
