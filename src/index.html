@@ -9,6 +9,7 @@ intro:
     Streaming live from Middlebury College, the Senior Celebration recognizes our graduates and confer degrees. Students, parents, families and friends are all invited to&nbsp;participate.
 
 video:
+  id: 5qap5aO4i9A
   button_href: https://www.youtube.com/embed/MpLrMqftSyk
   button_text: Watch Live Stream
   image: mead-chapel.jpg
@@ -51,11 +52,15 @@ closing:
 <div class="mb-8">
   <div class="relative pt-16:9 h-0">
     <iframe
-      src="{{video.button_href}}"
-      class="absolute inset-0 h-full w-full"
-      allow="autoplay; encrypted-media"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/{{video.id}}?autoplay=0&controls=1&rel=1&modestbranding=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
-    ></iframe>
+      class="absolute inset-0 h-full w-full"
+    >
+    </iframe>
   </div>
 
   <div class="border border-gray-light border-t-0 p-3 pt-4 mb-3">
