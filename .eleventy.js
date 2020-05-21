@@ -3,7 +3,7 @@ const htmlmin = require('html-minifier');
 const markdownIt = require('markdown-it');
 
 const minHtml = (content, outputPath) => {
-  if (outputPath.endsWith('.html')) {
+  if (outputPath && outputPath.endsWith('.html')) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
       removeComments: true,
