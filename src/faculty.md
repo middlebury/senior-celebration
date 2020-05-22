@@ -2,7 +2,7 @@
 title: Tenured Faculty
 layout: page
 tags: page
-sort: 15
+sort: 35
 ---
 
 Congratulations to our newly tenured faculty.
