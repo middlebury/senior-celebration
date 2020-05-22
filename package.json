@@ -11,7 +11,7 @@
     "clean": "rimraf _site",
     "start": "npm run watch",
     "deploy": "npx gh-pages -d _site -b site",
-    "predeploy": "npm run build"
+    "predeploy": "CI=true npm run build"
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
