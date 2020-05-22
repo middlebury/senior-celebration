@@ -57,3 +57,9 @@
   width: 1em;
   height: 1em;
 }
+
+.contains-p {
+  p:not(:last-child) {
+    @apply mb-4;
+  }
+}
