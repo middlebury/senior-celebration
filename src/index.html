@@ -65,11 +65,13 @@ closing:
       <h2 class="text-5 font-serif">{{program.title}}</h2>
       <p class="text-3 mb-3">{{program.text}}</p>
     </div>
-    <ol class="text-center mb-3">
+    <ol class="md:flex flex-wrap justify-center">
       {% for item in program.items %}
-      <li class="mb-1 mr-3 lg:inline-block">
-        <span class="font-bold">{{forloop.index + 1}}.</span>
-        {{item}}
+      <li class="mb-1 mr-3 flex">
+        <span class="font-bold mr-1">{{forloop.index}}.</span>
+        <span>
+          {{item}}
+        </span>
       </li>
       {% endfor %}
     </ol>
