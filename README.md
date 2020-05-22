@@ -29,3 +29,10 @@ npm run build
 ## Deploy
 
 Simply push to `master` branch and GitHub Actions will build and deploy to `site` branch.
+
+### Manual deploy
+
+```bash
+npm run build
+npx gh-pages -d _site -b site
+```
