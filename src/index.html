@@ -11,6 +11,7 @@ intro:
 video:
   id: t8ZO3lSgVjY
   transcript: false
+  caption: Captioning is available in English, Spanish, and Chinese. Please use the CC controls in the video player above. For those having difficulty accessing YouTube, an [alternative Zoom livestream](https://middlebury.zoom.us/j/91845778838) is being broadcast with Chinese language captioning.
 
 program:
   title: Order of the Program
@@ -97,8 +98,12 @@ closing:
         {% include transcript.html %}
       </div>
     </div>
+    {% endif %}
   </div>
-  {% endif %}
+
+  <div class="text-center text-2 mx-auto max-w-3xl contains-links py-3">
+    {{video.caption | markdownify}}
+  </div>
 </div>
 
 <div class="text-center mb-7 border-t-4 pt-3 border-navy">
