@@ -4,6 +4,14 @@ layout: page
 markdown: false
 tags: page
 sort: 10
+memoriam:
+  title: In Memoriam
+  text: |
+    In memory of our classmates who have passed away during our four years at Middlebury.
+
+  names:
+    - Thibault	Lannoy
+    - William	Nash
 ---
 
 <ul class="md:col-count-2 lg:col-count-3 text-4 mb-8">
@@ -20,12 +28,16 @@ sort: 10
   {% endfor %}
 </ul>
 
-<div>
-  <h2 class="h2 mb-3">heading</h2>
-  <p class="text-4">
-    Nostrud id proident esse quis. Veniam aute ipsum labore velit dolore aute
-    sint consectetur esse laboris. Nulla laboris quis enim deserunt aliquip.
-    Occaecat aliqua pariatur consequat aliqua velit. Fugiat cupidatat excepteur
-    et cillum labore aliqua amet exercitation.
-  </p>
-</div>
+<hr class="my-5 border-gray-light" />
+
+<h2 class="h2 mb-3">{{memoriam.title}}</h2>
+<p class="text-4 mb-3">
+  {{memoriam.text}}
+</p>
+<ul>
+  {% for name in memoriam.names %}
+  <li>
+    {{name}}
+  </li>
+  {% endfor %}
+</ul>
