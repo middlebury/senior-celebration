@@ -17,11 +17,11 @@ memoriam:
     - William Nash
 ---
 
-<p class="text-4 mb-8">
+<p class="text-4 mb-7">
   {{intro}}
 </p>
 
-<ul class="md:col-count-2 lg:col-count-3 text-4 mb-8">
+<ul class="md:col-count-2 lg:col-count-3 text-4 mb-3 lg:mb-6">
   {% for group in seniors %}
   <li class="inline-block w-full mb-5">
     <h2 class="font-serif text-5 mb-3 uppercase">{{group.letter}}</h2>
@@ -35,13 +35,13 @@ memoriam:
   {% endfor %}
 </ul>
 
-<hr class="my-5 border-gray-light" />
+<hr class="mb-5 border-gray-light" />
 
 <h2 class="h2 mb-3">{{memoriam.title}}</h2>
 <p class="text-4 mb-3">
   {{memoriam.text}}
 </p>
-<ul>
+<ul class="text-2 mb-1">
   {% for name in memoriam.names %}
   <li>
     {{name}}
