@@ -28,6 +28,22 @@
 
     {% include footer.html %}
 
+    <!-- prettier-ignore -->
+    {% if ci %}
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-993303-63"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-993303-63');
+    </script>
+    {% endif %}
+
     <script src="{{ '/js/main.js' | url }}"></script>
   </body>
 </html>
