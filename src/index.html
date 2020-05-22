@@ -6,7 +6,7 @@ intro:
   text: |
     **Our livestream event begins Sunday, May 24, 2020, at 2 p.m. EDT**  
 
-    Streaming from Middlebury College, the Senior Celebration recognizes our graduates and confer degrees. Students, parents, families, and friends are all invited to participate.
+    Streaming from Middlebury College, the Senior Celebration recognizes our graduates and confers degrees. Students, parents, families, and friends are all invited to participate.
 
 video:
   id: t8ZO3lSgVjY
@@ -16,27 +16,27 @@ program:
   title: Order of the Program
   text: (total running time is under an hour)
   items:
-    - Musical Video Intro
+    - Musical Video Introduction
     - Invocation
-    - Greetings from President Patton
-    - Congratulations from the Provost Jeff Cason and Dean of Students Baishakhi Taylor
+    - Greetings from President Laurie L. Patton
+    - Congratulations from Provost Jeff Cason and Dean of Students Baishakhi Taylor
     - Senior Greetings (SGA President and Class Officers)
-    - Video Montage of Seniors
-    - Preview of Postponed Commencement
-    - Conferral of the Degrees by President Patton
-    - Closing Song  (Alma Mater, a capella)
+    - Senior Video Montage
+    - Preview of On-Campus Commencement
+    - Conferral of the Degrees
+    - Singing of the Alma Mater
 
 social:
   title: '#MiddSeniorCelebration'
   text: |
-    Post photos and memories to celebrate our graduates! Use our #MiddSeniorCelebration hashtag or text to 1-936-255-2364. See our [guidelines](https://www.middlebury.edu/college/commencement/social-guidelines) for best ways to share. Content will begin to appear after the words from President Laurie L. Patton.
+    Post photos and memories to celebrate our graduates! Use our #MiddSeniorCelebration hashtag or text to 1-936-255-2364. See our [guidelines](https://www.middlebury.edu/college/commencement/social-guidelines) for best ways to share. Content will begin appearing after the greeting from President Laurie L. Patton.
 
 closing:
-  title: All Are Welcome to Participate
+  title: Degrees and Diplomas
   text: |
-    Students, parents, families, friends, faculty, and staff are all invited to share in this event where bachelors’ degrees will be officially awarded. 
+    Students, parents, families, friends, faculty, and staff are all invited to share in this event where our graduating students’ bachelor’s degrees will be officially awarded. We look forward to hosting our graduates and families on campus for formal Commencement exercises as soon as they are feasible to schedule.
 
-    We look forward to celebrating this milestone in our students’ lives together today and, when the time is right, at an on-campus Commencement.
+    Graduates will receive their diplomas by mail. Graduates can request that diplomas be mailed to a specific address. We will send an email with a link to the diploma mailing form soon.
 ---
 
 <div class="py-5 md:py-6 lg:py-7 text-center max-w-3xl mx-auto">
@@ -112,7 +112,7 @@ closing:
 
 <div class="my-7 md:my-8 text-center max-w-3xl mx-auto">
   <h2 class="h2 mb-3">{{closing.title}}</h2>
-  <p class="text-4 contains-links">
-    {{closing.text | markdownify}}
-  </p>
+  <div class="text-4 contains-links space-y-3">
+    {{closing.text | markdown}}
+  </div>
 </div>
