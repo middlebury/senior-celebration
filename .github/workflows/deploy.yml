@@ -31,5 +31,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
           PUBLISH_DIR: _site
-          PUBLISH_BRANCH: site
+          PUBLISH_BRANCH: site-auto
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
