@@ -30,6 +30,9 @@ module.exports = {
     spacing: remify([0, 4, 8, 16, 24, 32, 48, 64, 96]),
     fontSize: remify([10, 12, 14, 16, 18, 20, 24, 28, 36, 48, 64]),
     extend: {
+      minHeight: {
+        '80vh': '80vh'
+      },
       colors: {
         navy: '#0d395f',
         'navy-dark': '#022543',
