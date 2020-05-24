@@ -1,5 +1,10 @@
 const rem = (unit) => unit / 16 + 'rem';
 
+const PROD = process.env.NODE_ENV === 'production';
+
+// use px in dev so tailwind ext shows pixel values which are easier to match to designs than remembering rem conversion
+const remify = (scale) => scale.map((n) => (PROD ? rem(n) : n + 'px'));
+
 module.exports = {
   purge: ['./src/**/*.html', './src/js/*.js'],
   theme: {
@@ -22,29 +27,8 @@ module.exports = {
       body: '1.7',
       none: '1'
     },
-    spacing: {
-      0: 0,
-      1: rem(4),
-      2: rem(8),
-      3: rem(16),
-      4: rem(24),
-      5: rem(32),
-      6: rem(48),
-      7: rem(64),
-      8: rem(96)
-    },
-    fontSize: {
-      1: rem(12),
-      2: rem(14),
-      3: rem(16),
-      4: rem(18),
-      5: rem(20),
-      6: rem(24),
-      7: rem(28),
-      8: rem(36),
-      9: rem(48),
-      10: rem(64)
-    },
+    spacing: remify([0, 4, 8, 16, 24, 32, 48, 64, 96]),
+    fontSize: remify([10, 12, 14, 16, 18, 20, 24, 28, 36, 48, 64]),
     extend: {
       colors: {
         navy: '#0d395f',
