@@ -49,7 +49,7 @@ module.exports = function (config) {
 
   return {
     // site will live at middlebury.edu/senior-celebration
-    pathPrefix: process.env.CI && '/senior-celebration',
+    pathPrefix: '/senior-celebration',
     dir: {
       input: 'src'
     }
