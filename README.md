@@ -32,7 +32,8 @@ Simply push to `master` branch and GitHub Actions will build and deploy to `site
 
 ### Manual deploy
 
+Cleans, builds, and deploys via gh-pages manually
+
 ```bash
-npm run build
-npx gh-pages -d _site -b site
+npm run deploy
 ```
