@@ -44,7 +44,7 @@ module.exports = function (config) {
   });
 
   if (process.env.NODE_ENV == 'production') {
-    config.addTransform('htmlmin', minHtml);
+    // config.addTransform('htmlmin', minHtml);
   }
 
   return {
